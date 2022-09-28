@@ -30,3 +30,38 @@ if __name__ == '__main__':
     ]
 
     print(vendas)
+
+    # para mostrar cada lista separadamente
+    for venda in vendas:
+        print(venda)
+        # mostrar cada valor de cada lista individualmente
+        for v in venda:
+            print(v)
+
+    x = 0
+    y = 0
+
+    # mostrar valor da lista pretentido utilizando as variaveis x e y
+    print(f'vendas[x][y]: {vendas[x][y]}')
+
+    for x in range(2):
+        for y in range(5):
+            print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
+            print('xxxx')
+
+    for x in range(len(vendas)): #identico ao tamanho da lista (2)
+        for y in range(len(vendas[0])): #identico aos valores das casas da lista
+            print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
+        print('xxxx')
+
+    #total de vendas
+    total_vendas = 0
+    for x in range(2):
+        total_linha = 0
+        for y in range(5):
+            print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
+            total_vendas = total_vendas + vendas[x][y]
+            total_linha = total_vendas + vendas[x][y]
+        print(f'Total de linhas: {total_linha}')
+    print(f'Total de vendas: {total_vendas}')
+
