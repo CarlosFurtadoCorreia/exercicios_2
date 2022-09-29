@@ -43,25 +43,29 @@ if __name__ == '__main__':
 
     # mostrar valor da lista pretentido utilizando as variaveis x e y
     print(f'vendas[x][y]: {vendas[x][y]}')
-
-    for x in range(2):
-        for y in range(5):
-            print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
-            print('xxxx')
-
-    for x in range(len(vendas)): #identico ao tamanho da lista (2)
+    for x in range(5):
+        total_vendas = 0
+        for y in range(2):
+            print(f'vendas [{y}] [{x}] = {vendas[y][x]}')
+        total_vendas = total_vendas + vendas[y][x]
+        print(f'Total de vendas: {total_vendas}')
+        print('================')
+        
+    '''for x in range(len(vendas)): #identico ao tamanho da lista (2)
         for y in range(len(vendas[0])): #identico aos valores das casas da lista
             print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
-        print('xxxx')
+        print('xxxx')'''
 
     #total de vendas
-    total_vendas = 0
-    for x in range(2):
-        total_linha = 0
-        for y in range(5):
-            print(f'vendas [{x}] [{y}] = {vendas[x][y]}')
-            total_vendas = total_vendas + vendas[x][y]
-            total_linha = total_vendas + vendas[x][y]
-        print(f'Total de linhas: {total_linha}')
-    print(f'Total de vendas: {total_vendas}')
 
+    for x in range(5):
+        total_linha = 0
+        for y in range(2):
+            print(f'vendas [{y}] [{x}] = {vendas[y][x]}')
+            #total_vendas = total_vendas + vendas[y][x]
+            total_linha = total_vendas + vendas[y][x]
+        print(f'Total de linhas: {total_linha}')
+        print('================')
+    #print(f'Total de vendas: {total_vendas}')
+
+    
