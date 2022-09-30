@@ -11,14 +11,8 @@ qual ilha consumiu mais gasoleo'''
 ilhas = ['Terceira', 'Pico', 'Faial', 'São Jorge', 'Graciosa', 'Flores', 'Corvo']
 tipos = ['Gasolina', 'Gasóleo']
 vendas = [
-    [0, 0,
-     0, 0,
-     0, 0,
-     0, 0],
-    [0, 0,
-     0, 0,
-     0, 0,
-     0, 0]
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0]
 ]
 
 totais = [0, 0, 0, 0, 0, 0, 0]

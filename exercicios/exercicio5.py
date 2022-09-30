@@ -1,5 +1,6 @@
 '''lista com 5 nums
-lista tem que gerar nums entre 1-50'''
+lista tem que gerar nums entre 1-50
+'''
 
 #GERAR NUMS ALEATORIOS
 import random
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     jogos = [0, 0, 0, 0, 0]
     for x in range(len(nums)):
         while True:
-            numero = get_random(1, 5)
+            numero = get_random(1, 50)
             if numero not in nums:
                 nums[x] = numero
                 break
@@ -34,9 +35,11 @@ if __name__ == '__main__':
                 break
     print(f'Estrelas: {estrelas}')
 
-    '''for x in range(len(jogos)):
-        for y in range(len(nums)):
-            while True:
-                try:
-                    jogos
-    print(nums)'''
+    troquei = True
+    x = 0
+    while troquei:
+        troquei = False
+        for x in range(4):
+            if nums[x] > nums[x + 1]:
+                troquei = True
+        print(nums)
